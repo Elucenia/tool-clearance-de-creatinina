@@ -1,0 +1,234 @@
+{
+  "tool": {
+    "id": "clearance-de-creatinina",
+    "title": "Clearance de creatinina (Cockcroft-Gault)",
+    "short": "Ajuste de dose de medicamentos",
+    "spec": [
+      "nefrologia",
+      "clinica-medica",
+      "cardiologia",
+      "geriatria"
+    ],
+    "desc": "Calcule o clearance de creatinina pela fórmula de Cockcroft-Gault, usada no ajuste de dose de anticoagulantes diretos e outros medicamentos.",
+    "lead": "Estima o clearance de creatinina, a referência usada nas bulas para ajustar a dose de anticoagulantes diretos, antiarrítmicos e outros medicamentos.",
+    "fields": [
+      [
+        "idade",
+        "Idade",
+        "num",
+        {
+          "min": 18,
+          "max": 110,
+          "unit": "anos",
+          "ph": "70"
+        }
+      ],
+      [
+        "peso",
+        "Peso",
+        "num",
+        {
+          "min": 25,
+          "max": 300,
+          "step": "0.1",
+          "unit": "kg",
+          "ph": "70"
+        }
+      ],
+      [
+        "cr",
+        "Creatinina sérica",
+        "num",
+        {
+          "min": 0.2,
+          "max": 20,
+          "step": "0.01",
+          "unit": "mg/dL",
+          "ph": "1,0"
+        }
+      ],
+      [
+        "sexo",
+        "Sexo",
+        "radio",
+        {
+          "opts": {
+            "F": "Feminino",
+            "M": "Masculino"
+          }
+        }
+      ]
+    ],
+    "formula": "<p>ClCr (mL/min) = [(140 − idade) × peso] ÷ (72 × creatinina) × 0,85 nas mulheres.</p>",
+    "table": [
+      [
+        "ClCr (mL/min)",
+        "Uso prático"
+      ],
+      [
+        "≥ 50",
+        "Dose plena da maioria dos DOACs"
+      ],
+      [
+        "30 a 49",
+        "Reduzir dose de dabigatrana, rivaroxabana e edoxabana conforme bula"
+      ],
+      [
+        "15 a 29",
+        "Uso restrito; dabigatrana contraindicada"
+      ],
+      [
+        "&lt; 15",
+        "Evitar DOACs (dados limitados)"
+      ]
+    ],
+    "tips": [
+      "Use o <strong>peso real</strong> em pacientes com peso normal. Em obesos, muitos serviços usam o peso ajustado; em caquéticos, o resultado superestima a função renal.",
+      "Para anticoagulantes diretos, as bulas e os estudos pivotais usaram Cockcroft-Gault: não substitua pela TFG do CKD-EPI no ajuste de dose.",
+      "A apixabana tem critérios próprios de redução (2 de 3: idade ≥ 80, peso ≤ 60 kg, creatinina ≥ 1,5 mg/dL).",
+      "A creatinina precisa estar estável: em lesão renal aguda, nenhuma fórmula é confiável."
+    ],
+    "sources": [
+      [
+        "Cockcroft DW, Gault MH. Prediction of creatinine clearance from serum creatinine. Nephron, 1976.",
+        "https://doi.org/10.1159/000180580"
+      ],
+      [
+        "Steffel J et al. 2021 EHRA Practical Guide on the use of non-vitamin K antagonist oral anticoagulants in patients with atrial fibrillation. Europace, 2021.",
+        "https://doi.org/10.1093/europace/euab065"
+      ]
+    ],
+    "cases": [
+      [
+        "70 anos, 70 kg, Cr 1,0 (homem): 68,1 mL/min",
+        {
+          "idade": 70,
+          "peso": 70,
+          "cr": 1,
+          "sexo": "M"
+        },
+        {
+          "raw": {
+            "cl": 68.06
+          },
+          "tol": 0.01,
+          "level": "low"
+        }
+      ],
+      [
+        "70 anos, 70 kg, Cr 1,0 (mulher): 57,9 mL/min (× 0,85)",
+        {
+          "idade": 70,
+          "peso": 70,
+          "cr": 1,
+          "sexo": "F"
+        },
+        {
+          "raw": {
+            "cl": 57.85
+          },
+          "tol": 0.01
+        }
+      ],
+      [
+        "80 anos, 50 kg, Cr 2,0 (mulher): 17,7 mL/min",
+        {
+          "idade": 80,
+          "peso": 50,
+          "cr": 2,
+          "sexo": "F"
+        },
+        {
+          "raw": {
+            "cl": 17.71
+          },
+          "tol": 0.01,
+          "level": "high"
+        }
+      ]
+    ],
+    "batch": "cardiologia",
+    "kind": "Calculadora",
+    "config": null,
+    "areaId": "renal-digestivo",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/cardiologia.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 3,
+      "passed": 3,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 3,
+      "passed": 3,
+      "cases": [
+        {
+          "label": "Fator masculino: 100×72/(72×1)=100",
+          "input": {
+            "idade": 40,
+            "peso": 72,
+            "cr": 1,
+            "sexo": "M"
+          },
+          "expected": {
+            "cl": 100
+          },
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "label": "Fator feminino de 0,85",
+          "input": {
+            "idade": 40,
+            "peso": 72,
+            "cr": 1,
+            "sexo": "F"
+          },
+          "expected": {
+            "cl": 85
+          },
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "label": "Dobrar creatinina reduz resultado à metade",
+          "input": {
+            "idade": 40,
+            "peso": 72,
+            "cr": 2,
+            "sexo": "M"
+          },
+          "expected": {
+            "cl": 50
+          },
+          "status": "passed",
+          "failures": []
+        }
+      ]
+    }
+  },
+  "review": {
+    "id": "clearance-de-creatinina",
+    "status": "needs-review",
+    "reason": "Cockcroft–Gault pode ser exibido numericamente após testes, mas o ZIP recomenda doses genéricas de DOACs apenas por faixas de depuração. A dose depende de fármaco, indicação, idade, peso e outros fatores; a bula de apixabana mostra essa limitação concreta.",
+    "sourceUrl": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/202155Orig1s039%2Cs040lbl.pdf",
+    "sourceTitle": "FDA — ELIQUIS prescribing information",
+    "sourceDate": "2025",
+    "publisherRegion": "Estados Unidos / FDA",
+    "checkedAt": "2026-09-25",
+    "clinicalValidation": "not-performed",
+    "suppressLegacyFormula": true,
+    "formulaOverride": "CrCl (mL/min) = (140 − idade) × peso (kg) / [72 × creatinina (mg/dL)] × 0,85 se feminino. A escolha do peso e a aplicação para medicamentos exigem avaliação específica; sem recomendação automática de dose."
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/cardiologia.php",
+    "sha256": "ed536451dd02922a7f840f2c9ce575be004cddb227f60426b7a52cf1b0e94ec0",
+    "bytes": 61303
+  },
+  "clinicalValidation": "not-performed"
+}

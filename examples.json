@@ -1,0 +1,70 @@
+[
+  {
+    "label": "70 anos, 70 kg, Cr 1,0 (homem): 68,1 mL/min",
+    "input": {
+      "idade": 70,
+      "peso": 70,
+      "cr": 1,
+      "sexo": "M"
+    },
+    "expected": {
+      "raw": {
+        "cl": 68.06
+      },
+      "tol": 0.01,
+      "level": "low"
+    },
+    "originalInput": {
+      "idade": 70,
+      "peso": 70,
+      "cr": 1,
+      "sexo": "M"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "70 anos, 70 kg, Cr 1,0 (mulher): 57,9 mL/min (× 0,85)",
+    "input": {
+      "idade": 70,
+      "peso": 70,
+      "cr": 1,
+      "sexo": "F"
+    },
+    "expected": {
+      "raw": {
+        "cl": 57.85
+      },
+      "tol": 0.01
+    },
+    "originalInput": {
+      "idade": 70,
+      "peso": 70,
+      "cr": 1,
+      "sexo": "F"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "80 anos, 50 kg, Cr 2,0 (mulher): 17,7 mL/min",
+    "input": {
+      "idade": 80,
+      "peso": 50,
+      "cr": 2,
+      "sexo": "F"
+    },
+    "expected": {
+      "raw": {
+        "cl": 17.71
+      },
+      "tol": 0.01,
+      "level": "high"
+    },
+    "originalInput": {
+      "idade": 80,
+      "peso": 50,
+      "cr": 2,
+      "sexo": "F"
+    },
+    "expandedZeroOptions": []
+  }
+]
