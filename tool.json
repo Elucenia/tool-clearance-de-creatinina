@@ -147,13 +147,9 @@
         }
       ]
     ],
-    "batch": "cardiologia",
     "kind": "Calculadora",
     "config": null,
-    "areaId": "renal-digestivo",
     "clinicalReview": "pending",
-    "sourceReview": "pending",
-    "sourceFile": "app/content/ferramentas/cardiologia.php",
     "arithmeticTest": {
       "status": "passed",
       "testedAt": "2026-09-25",
@@ -224,11 +220,6 @@
     "clinicalValidation": "not-performed",
     "suppressLegacyFormula": true,
     "formulaOverride": "CrCl (mL/min) = (140 − idade) × peso (kg) / [72 × creatinina (mg/dL)] × 0,85 se feminino. A escolha do peso e a aplicação para medicamentos exigem avaliação específica; sem recomendação automática de dose."
-  },
-  "sourceFile": {
-    "path": "app/content/ferramentas/cardiologia.php",
-    "sha256": "ed536451dd02922a7f840f2c9ce575be004cddb227f60426b7a52cf1b0e94ec0",
-    "bytes": 61303
   },
   "clinicalValidation": "not-performed"
 }
