@@ -3,14 +3,15 @@
     "id": "clearance-de-creatinina",
     "title": "Clearance de creatinina (Cockcroft-Gault)",
     "short": "Ajuste de dose de medicamentos",
+    "desc": "Calcule o clearance de creatinina pela fórmula de Cockcroft-Gault, usada no ajuste de dose de anticoagulantes diretos e outros medicamentos.",
+    "lead": "Estima o clearance de creatinina, a referência usada nas bulas para ajustar a dose de anticoagulantes diretos, antiarrítmicos e outros medicamentos.",
+    "kind": "Calculadora",
     "spec": [
       "nefrologia",
       "clinica-medica",
       "cardiologia",
       "geriatria"
     ],
-    "desc": "Calcule o clearance de creatinina pela fórmula de Cockcroft-Gault, usada no ajuste de dose de anticoagulantes diretos e outros medicamentos.",
-    "lead": "Estima o clearance de creatinina, a referência usada nas bulas para ajustar a dose de anticoagulantes diretos, antiarrítmicos e outros medicamentos.",
     "fields": [
       [
         "idade",
@@ -60,34 +61,6 @@
       ]
     ],
     "formula": "<p>ClCr (mL/min) = [(140 − idade) × peso] ÷ (72 × creatinina) × 0,85 nas mulheres.</p>",
-    "table": [
-      [
-        "ClCr (mL/min)",
-        "Uso prático"
-      ],
-      [
-        "≥ 50",
-        "Dose plena da maioria dos DOACs"
-      ],
-      [
-        "30 a 49",
-        "Reduzir dose de dabigatrana, rivaroxabana e edoxabana conforme bula"
-      ],
-      [
-        "15 a 29",
-        "Uso restrito; dabigatrana contraindicada"
-      ],
-      [
-        "&lt; 15",
-        "Evitar DOACs (dados limitados)"
-      ]
-    ],
-    "tips": [
-      "Use o <strong>peso real</strong> em pacientes com peso normal. Em obesos, muitos serviços usam o peso ajustado; em caquéticos, o resultado superestima a função renal.",
-      "Para anticoagulantes diretos, as bulas e os estudos pivotais usaram Cockcroft-Gault: não substitua pela TFG do CKD-EPI no ajuste de dose.",
-      "A apixabana tem critérios próprios de redução (2 de 3: idade ≥ 80, peso ≤ 60 kg, creatinina ≥ 1,5 mg/dL).",
-      "A creatinina precisa estar estável: em lesão renal aguda, nenhuma fórmula é confiável."
-    ],
     "sources": [
       [
         "Cockcroft DW, Gault MH. Prediction of creatinine clearance from serum creatinine. Nephron, 1976.",
@@ -96,6 +69,10 @@
       [
         "Steffel J et al. 2021 EHRA Practical Guide on the use of non-vitamin K antagonist oral anticoagulants in patients with atrial fibrillation. Europace, 2021.",
         "https://doi.org/10.1093/europace/euab065"
+      ],
+      [
+        "NIDDK drug-dosing guidance, reviewedOctober2024",
+        "https://www.niddk.nih.gov/research-funding/research-programs/kidney-clinical-research-epidemiology/laboratory/ckd-drug-dosing-providers"
       ]
     ],
     "cases": [
@@ -147,9 +124,6 @@
         }
       ]
     ],
-    "kind": "Calculadora",
-    "config": null,
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
       "testedAt": "2026-09-25",
@@ -162,64 +136,171 @@
       "testedAt": "2026-09-25",
       "total": 3,
       "passed": 3,
-      "cases": [
+      "publicCandidateBankOmitted": true
+    },
+    "methodVersion": "Cockcroft Gault 1976:(140−idade)×peso/(72×Cr); fator mulher 0,85; Cl Crnãoindexado",
+    "implementationVersion": "clearance-de-creatinina@native-2026-10-03+400c0bd83d47",
+    "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/1244564/",
+    "versionEvidence": {
+      "status": "variant-and-source-edition-recorded",
+      "checkedAt": "2026-10-03",
+      "implementedVariant": "ClCr (mL/min) = [(140 − idade) × peso] ÷ (72 × creatinina) × 0,85 nas mulheres.",
+      "inputContract": {
+        "fields": [
+          {
+            "key": "idade",
+            "label": "Idade",
+            "type": "num",
+            "min": 18,
+            "max": 110,
+            "unit": "anos",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "peso",
+            "label": "Peso",
+            "type": "num",
+            "min": 25,
+            "max": 300,
+            "unit": "kg",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "cr",
+            "label": "Creatinina sérica",
+            "type": "num",
+            "min": 0.2,
+            "max": 20,
+            "unit": "mg/dL",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "sexo",
+            "label": "Sexo",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "F": "Feminino",
+              "M": "Masculino"
+            }
+          }
+        ],
+        "hash": "cd88a6aa7e01e03e4acfe5b13a3f08490d70e737a92bc7e6b452249b5d992a9b"
+      },
+      "sourceEditions": [
         {
-          "label": "Fator masculino: 100×72/(72×1)=100",
-          "input": {
-            "idade": 40,
-            "peso": 72,
-            "cr": 1,
-            "sexo": "M"
+          "citation": "Cockcroft DW, Gault MH. Prediction of creatinine clearance from serum creatinine. Nephron, 1976.",
+          "url": "https://doi.org/10.1159/000180580",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Prediction of creatinine clearance from serum creatinine.",
+            "year": "1976",
+            "firstPublicationDate": "1976-01-01",
+            "doi": "10.1159/000180580",
+            "pmid": "1244564",
+            "journal": "Nephron",
+            "authors": "Cockcroft DW, Gault MH."
           },
-          "expected": {
-            "cl": 100
-          },
-          "status": "passed",
-          "failures": []
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/1244564/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "46957b2ab227b16c89251778ed32162c6d7f15572257c6041645543810f68138",
+          "matchedBy": "exact-DOI-or-PMID"
         },
         {
-          "label": "Fator feminino de 0,85",
-          "input": {
-            "idade": 40,
-            "peso": 72,
-            "cr": 1,
-            "sexo": "F"
+          "citation": "Steffel J et al. 2021 EHRA Practical Guide on the use of non-vitamin K antagonist oral anticoagulants in patients with atrial fibrillation. Europace, 2021.",
+          "url": "https://doi.org/10.1093/europace/euab065",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "2021 European Heart Rhythm Association Practical Guide on the Use of Non-Vitamin K Antagonist Oral Anticoagulants in Patients with Atrial Fibrillation.",
+            "year": "2021",
+            "firstPublicationDate": "2021-10-01",
+            "doi": "10.1093/europace/euab065",
+            "pmid": "33895845",
+            "pmcid": "PMC11636576",
+            "journal": "Europace : European pacing, arrhythmias, and cardiac electrophysiology : journal of the working groups on cardiac pacing, arrhythmias, and cardiac cellular electrophysiology of the European Society of Cardiology",
+            "authors": "Steffel J, Collins R, Antz M, Cornu P, Desteghe L, Haeusler KG, Oldgren J, Reinecke H, Roldan-Schilling V, Rowell N, Sinnaeve P, Vanassche T, Potpara T, Camm AJ, Heidbüchel H, External reviewers."
           },
-          "expected": {
-            "cl": 85
-          },
-          "status": "passed",
-          "failures": []
-        },
-        {
-          "label": "Dobrar creatinina reduz resultado à metade",
-          "input": {
-            "idade": 40,
-            "peso": 72,
-            "cr": 2,
-            "sexo": "M"
-          },
-          "expected": {
-            "cl": 50
-          },
-          "status": "passed",
-          "failures": []
+          "primaryPublicationUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11636576/",
+          "abstractAvailable": false,
+          "fullTextSha256": null,
+          "abstractSha256": null,
+          "matchedBy": "exact-DOI-or-PMID"
         }
-      ]
+      ],
+      "publicationEditionConfirmed": true,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by bibliographic identity or automatic full-text retrieval; retain independent arithmetic and clinical review as separate evidence.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-09-25",
+        "total": 3,
+        "passed": 3,
+        "publicCandidateBankOmitted": true
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "implementationHash": "400c0bd83d47a15c431526b963a6a0b1983f93b291418084a0b4c785027c66e2"
+    },
+    "limits": "Estimativa histórica de clearance de creatinina em mL/min, sem indexação por superfície corporal; não equivale à TFG medida nem ao valor CKD-EPI indexado. O cálculo usa exatamente o peso informado e não escolhe automaticamente peso real, ideal ou ajustado. Tamanho corporal ou massa muscular atípicos e condições que alteram a creatinina podem prejudicar a estimativa. Para dose de medicamento, confira a bula e o protocolo específicos, o método renal usado e a necessidade de confirmação, sobretudo com margem terapêutica estreita. O resultado isolado não prescreve dose.",
+    "limitsEvidence": {
+      "status": "primary-source-documentation-checked",
+      "sources": [
+        {
+          "url": "https://doi.org/10.1159/000180580",
+          "edition": "Cockcroft–Gault1976, Nephron16:31–41",
+          "access": "Original DOI already catalogued; original full article was not retrieved in this next-batch pass."
+        },
+        {
+          "url": "https://www.niddk.nih.gov/research-funding/research-programs/kidney-clinical-research-epidemiology/laboratory/ckd-drug-dosing-providers",
+          "edition": "NIDDK drug-dosing guidance, reviewedOctober2024",
+          "access": "Direct official page read: FDA does not select a universal estimating equation; label methods vary; limitations from size/muscle/diet/tubular secretion; confirmation for difficult estimates."
+        }
+      ],
+      "checkedScope": "Only specific retrieved official sections listed per method. Failed original publisher requests explicitly separated from successful institutional primary-article copies or official guideline pages. No new website edits or clinical approval.",
+      "confirmedLimits": [
+        "Output is estimated creatinine clearance inunindexedmL/min; it is not the same measurement as indexed CKD-EPI GFR.",
+        "The single weight entered is used as supplied; this form does not select an appropriate weight convention for obesity/edema.",
+        "Serum creatinine can be misleading with atypical muscle mass/body size; a narrow-therapeutic-index medicine may require confirmation.",
+        "The medicine-specific label and clinical context determine dose adjustment, not a universal equation alone."
+      ],
+      "sourceReviewReport": "reports/review-20261003/native-population-limits-next-five-review.json",
+      "sourceReviewSha256": "2259ae5d265f007502a7e7abb5ea74579c9fd733fee2049a77d71fd93f6898cc",
+      "accessLimit": "Only the sections identified in each source access record were checked. Unretrieved publisher originals remain explicitly unretrieved; this is not a full source or population validation approval.",
+      "clinicalValidation": "not-performed",
+      "professionalLanguageReview": "not-performed",
+      "arithmeticChanged": false
     }
   },
-  "review": {
-    "id": "clearance-de-creatinina",
-    "status": "needs-review",
-    "reason": "Cockcroft–Gault pode ser exibido numericamente após testes, mas o ZIP recomenda doses genéricas de DOACs apenas por faixas de depuração. A dose depende de fármaco, indicação, idade, peso e outros fatores; a bula de apixabana mostra essa limitação concreta.",
-    "sourceUrl": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/202155Orig1s039%2Cs040lbl.pdf",
-    "sourceTitle": "FDA — ELIQUIS prescribing information",
-    "sourceDate": "2025",
-    "publisherRegion": "Estados Unidos / FDA",
-    "checkedAt": "2026-09-25",
-    "clinicalValidation": "not-performed",
-    "suppressLegacyFormula": true,
-    "formulaOverride": "CrCl (mL/min) = (140 − idade) × peso (kg) / [72 × creatinina (mg/dL)] × 0,85 se feminino. A escolha do peso e a aplicação para medicamentos exigem avaliação específica; sem recomendação automática de dose."
+  "currentSource": {
+    "file": "apps/website/private/tool-code/clearance-de-creatinina/calculator.js",
+    "bytes": 5028,
+    "sha256": "400c0bd83d47a15c431526b963a6a0b1983f93b291418084a0b4c785027c66e2"
   },
-  "clinicalValidation": "not-performed"
+  "sourceToolSha256": "e72276bd37a3544c7869641d65b6a443eb37908f306d13e75d4935f8740cf31d",
+  "omittedFullReferenceBanks": [
+    {
+      "rows": 3,
+      "sha256": "5a4473af96ee31901e4f45a17faee9ef10201263186eec5c25de0060480ff5d7",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    },
+    {
+      "rows": 3,
+      "sha256": "5a4473af96ee31901e4f45a17faee9ef10201263186eec5c25de0060480ff5d7",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    }
+  ],
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }

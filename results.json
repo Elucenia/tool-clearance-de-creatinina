@@ -1,0 +1,260 @@
+{
+  "id": "clearance-de-creatinina",
+  "at": "2026-10-05T17:29:12.172Z",
+  "adapter": {
+    "file": "apps/website/private/tool-code/clearance-de-creatinina/calculator.js",
+    "bytes": 5028,
+    "sha256": "400c0bd83d47a15c431526b963a6a0b1983f93b291418084a0b4c785027c66e2"
+  },
+  "cases": [
+    {
+      "name": "70 anos, 70 kg, Cr 1,0 (homem): 68,1 mL/min",
+      "input": {
+        "idade": 70,
+        "peso": 70,
+        "cr": 1,
+        "sexo": "M"
+      },
+      "obtained": {
+        "id": "clearance-de-creatinina",
+        "main": [
+          "68,1",
+          "mL/min"
+        ],
+        "label": "Clearance de creatinina",
+        "raw": {
+          "cl": 68.05555555555556
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.cl",
+          "expected": 68.06,
+          "obtained": 68.05555555555556,
+          "tolerance": 0.01,
+          "difference": 0.004444444444445139,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.cl",
+          "expected": 68.05555555555556,
+          "obtained": 68.05555555555556,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "68,1",
+          "obtained": "68,1",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "mL/min",
+          "obtained": "mL/min",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "70 anos, 70 kg, Cr 1,0 (mulher): 57,9 mL/min (× 0,85)",
+      "input": {
+        "idade": 70,
+        "peso": 70,
+        "cr": 1,
+        "sexo": "F"
+      },
+      "obtained": {
+        "id": "clearance-de-creatinina",
+        "main": [
+          "57,8",
+          "mL/min"
+        ],
+        "label": "Clearance de creatinina",
+        "raw": {
+          "cl": 57.84722222222222
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.cl",
+          "expected": 57.85,
+          "obtained": 57.84722222222222,
+          "tolerance": 0.01,
+          "difference": 0.0027777777777799884,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.cl",
+          "expected": 57.84722222222222,
+          "obtained": 57.84722222222222,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "57,8",
+          "obtained": "57,8",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "mL/min",
+          "obtained": "mL/min",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [],
+      "status": "passed"
+    },
+    {
+      "name": "80 anos, 50 kg, Cr 2,0 (mulher): 17,7 mL/min",
+      "input": {
+        "idade": 80,
+        "peso": 50,
+        "cr": 2,
+        "sexo": "F"
+      },
+      "obtained": {
+        "id": "clearance-de-creatinina",
+        "main": [
+          "17,7",
+          "mL/min"
+        ],
+        "label": "Clearance de creatinina",
+        "raw": {
+          "cl": 17.708333333333332
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.cl",
+          "expected": 17.71,
+          "obtained": 17.708333333333332,
+          "tolerance": 0.01,
+          "difference": 0.0016666666666687036,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.cl",
+          "expected": 17.708333333333332,
+          "obtained": 17.708333333333332,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "17,7",
+          "obtained": "17,7",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "mL/min",
+          "obtained": "mL/min",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    }
+  ],
+  "refusals": {
+    "passed": 37,
+    "failed": 0,
+    "failures": []
+  },
+  "sourceNodeBrowserVmParity": true,
+  "actualBrowserDomVerified": false,
+  "newIndependentOracle": false,
+  "currentActualR6HttpEvidence": "pending",
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false
+}

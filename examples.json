@@ -1,6 +1,15 @@
 [
   {
-    "label": "70 anos, 70 kg, Cr 1,0 (homem): 68,1 mL/min",
+    "id": "clearance-de-creatinina",
+    "kind": "native-source-reference",
+    "index": 0,
+    "name": "70 anos, 70 kg, Cr 1,0 (homem): 68,1 mL/min",
+    "originalInput": {
+      "idade": 70,
+      "peso": 70,
+      "cr": 1,
+      "sexo": "M"
+    },
     "input": {
       "idade": 70,
       "peso": 70,
@@ -14,16 +23,36 @@
       "tol": 0.01,
       "level": "low"
     },
+    "recordedResult": {
+      "main": [
+        "68,1",
+        "mL/min"
+      ],
+      "label": "Clearance de creatinina",
+      "raw": {
+        "cl": 68.05555555555556
+      }
+    },
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
+  },
+  {
+    "id": "clearance-de-creatinina",
+    "kind": "native-source-reference",
+    "index": 1,
+    "name": "70 anos, 70 kg, Cr 1,0 (mulher): 57,9 mL/min (× 0,85)",
     "originalInput": {
       "idade": 70,
       "peso": 70,
       "cr": 1,
-      "sexo": "M"
+      "sexo": "F"
     },
-    "expandedZeroOptions": []
-  },
-  {
-    "label": "70 anos, 70 kg, Cr 1,0 (mulher): 57,9 mL/min (× 0,85)",
     "input": {
       "idade": 70,
       "peso": 70,
@@ -36,16 +65,36 @@
       },
       "tol": 0.01
     },
-    "originalInput": {
-      "idade": 70,
-      "peso": 70,
-      "cr": 1,
-      "sexo": "F"
+    "recordedResult": {
+      "main": [
+        "57,8",
+        "mL/min"
+      ],
+      "label": "Clearance de creatinina",
+      "raw": {
+        "cl": 57.84722222222222
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "80 anos, 50 kg, Cr 2,0 (mulher): 17,7 mL/min",
+    "id": "clearance-de-creatinina",
+    "kind": "native-source-reference",
+    "index": 2,
+    "name": "80 anos, 50 kg, Cr 2,0 (mulher): 17,7 mL/min",
+    "originalInput": {
+      "idade": 80,
+      "peso": 50,
+      "cr": 2,
+      "sexo": "F"
+    },
     "input": {
       "idade": 80,
       "peso": 50,
@@ -59,12 +108,23 @@
       "tol": 0.01,
       "level": "high"
     },
-    "originalInput": {
-      "idade": 80,
-      "peso": 50,
-      "cr": 2,
-      "sexo": "F"
+    "recordedResult": {
+      "main": [
+        "17,7",
+        "mL/min"
+      ],
+      "label": "Clearance de creatinina",
+      "raw": {
+        "cl": 17.708333333333332
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   }
 ]
