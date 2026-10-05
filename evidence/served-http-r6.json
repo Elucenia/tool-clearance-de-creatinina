@@ -1,0 +1,632 @@
+{
+  "schema": "elucenia-native-tool-actual-r6-local-HTTP-subset-r5",
+  "id": "clearance-de-creatinina",
+  "sourceReceipt": {
+    "file": "reports/review-20261005-completion/deploy-lock/r6-all-calculators-http-results.json",
+    "bytes": 7105396,
+    "sha256": "c0b1e4dc320ce807e78c0444e629c1269b545b6e2ac87c265d896073d8c34ecb"
+  },
+  "servedBuildId": "jN-2wbRrarMjYPwdPnRHh",
+  "checker": {
+    "file": "reports/review-20261005-completion/deploy-lock/verify-r6-all-calculators-http.cjs",
+    "sha256": "92411a9e01fe36e1bf380c3336f2171bdb523a02ff09683da75927b12b33b3fa",
+    "bytes": 20735
+  },
+  "health": {
+    "url": "http://127.0.0.1:3067/api/health",
+    "startedAt": "2026-10-05T17:35:43.039Z",
+    "status": 200,
+    "headers": {
+      "contentType": "application/json",
+      "retryAfter": null,
+      "cacheControl": "no-store",
+      "nosniff": "nosniff"
+    },
+    "body": {
+      "status": "ok",
+      "application": "ELUCENIA",
+      "framework": "Next.js",
+      "version": "1.0.0"
+    },
+    "responseSha256": "65f95645e7826371eb2d9d3f96e0fed52ea4b88c77203f0cf2511769e57cd108",
+    "bytes": 80,
+    "elapsedMs": 27.345699999999994
+  },
+  "identity": {
+    "url": "http://127.0.0.1:3067/_next/data/jN-2wbRrarMjYPwdPnRHh/en/tools.json",
+    "startedAt": "2026-10-05T17:35:43.068Z",
+    "status": 200,
+    "headers": {
+      "contentType": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "cacheControl": "s-maxage=31536000",
+      "nosniff": "nosniff"
+    },
+    "responseSha256": "404601e2c283a588a2f41af4feb5113d1993f76cc22f73a7b8ef4f5d17a82fa8",
+    "bytes": 103853,
+    "elapsedMs": 14.542600000000007,
+    "semanticMatchWithCompiledCatalog": true
+  },
+  "sourceCalculator": {
+    "file": "deliveries/elucenia-next-hostinger-r6/private/tool-code/clearance-de-creatinina/calculator.js",
+    "sha256": "400c0bd83d47a15c431526b963a6a0b1983f93b291418084a0b4c785027c66e2",
+    "bytes": 5028
+  },
+  "sourceCalculatorMatchesCurrentCandidate": true,
+  "toolStatus": {
+    "cases": 3,
+    "replayed": 3,
+    "passed": 3,
+    "failed": 0,
+    "status": "passed"
+  },
+  "cases": [
+    {
+      "id": "clearance-de-creatinina",
+      "kind": "native-source-reference",
+      "index": 0,
+      "name": "70 anos, 70 kg, Cr 1,0 (homem): 68,1 mL/min",
+      "originalInput": {
+        "idade": 70,
+        "peso": 70,
+        "cr": 1,
+        "sexo": "M"
+      },
+      "input": {
+        "idade": 70,
+        "peso": 70,
+        "cr": 1,
+        "sexo": "M"
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "cl": 68.06
+        },
+        "tol": 0.01,
+        "level": "low"
+      },
+      "recordedResult": {
+        "main": [
+          "68,1",
+          "mL/min"
+        ],
+        "label": "Clearance de creatinina",
+        "raw": {
+          "cl": 68.05555555555556
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/clearance-de-creatinina/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "idade": 70,
+            "peso": 70,
+            "cr": 1,
+            "sexo": "M"
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/clearance-de-creatinina/calculate",
+          "startedAt": "2026-10-05T17:36:13.788Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "clearance-de-creatinina",
+              "main": [
+                "68,1",
+                "mL/min"
+              ],
+              "label": "Clearance de creatinina",
+              "raw": {
+                "cl": 68.05555555555556
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "c7f22d5d85fc4166581ff2b9d7cbccccc8dad18d25d63e0d087ce67d360c1acc",
+          "bytes": 170,
+          "elapsedMs": 4.900099999998929
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/clearance-de-creatinina/calculate",
+        "startedAt": "2026-10-05T17:36:13.788Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "clearance-de-creatinina",
+            "main": [
+              "68,1",
+              "mL/min"
+            ],
+            "label": "Clearance de creatinina",
+            "raw": {
+              "cl": 68.05555555555556
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "c7f22d5d85fc4166581ff2b9d7cbccccc8dad18d25d63e0d087ce67d360c1acc",
+        "bytes": 170,
+        "elapsedMs": 4.900099999998929
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.cl",
+            "expected": 68.06,
+            "obtained": 68.05555555555556,
+            "tolerance": 0.01,
+            "difference": 0.004444444444445139,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.cl",
+            "expected": 68.05555555555556,
+            "obtained": 68.05555555555556,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "68,1",
+            "obtained": "68,1",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "mL/min",
+            "obtained": "mL/min",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "clearance-de-creatinina",
+      "kind": "native-source-reference",
+      "index": 1,
+      "name": "70 anos, 70 kg, Cr 1,0 (mulher): 57,9 mL/min (× 0,85)",
+      "originalInput": {
+        "idade": 70,
+        "peso": 70,
+        "cr": 1,
+        "sexo": "F"
+      },
+      "input": {
+        "idade": 70,
+        "peso": 70,
+        "cr": 1,
+        "sexo": "F"
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "cl": 57.85
+        },
+        "tol": 0.01
+      },
+      "recordedResult": {
+        "main": [
+          "57,8",
+          "mL/min"
+        ],
+        "label": "Clearance de creatinina",
+        "raw": {
+          "cl": 57.84722222222222
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/clearance-de-creatinina/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "idade": 70,
+            "peso": 70,
+            "cr": 1,
+            "sexo": "F"
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/clearance-de-creatinina/calculate",
+          "startedAt": "2026-10-05T17:36:14.101Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "clearance-de-creatinina",
+              "main": [
+                "57,8",
+                "mL/min"
+              ],
+              "label": "Clearance de creatinina",
+              "raw": {
+                "cl": 57.84722222222222
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "81e23ef4705b29b3876f31e4dd9e1698e4d00cb78515ca62ad301105ebedf709",
+          "bytes": 170,
+          "elapsedMs": 3.4681000000018685
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/clearance-de-creatinina/calculate",
+        "startedAt": "2026-10-05T17:36:14.101Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "clearance-de-creatinina",
+            "main": [
+              "57,8",
+              "mL/min"
+            ],
+            "label": "Clearance de creatinina",
+            "raw": {
+              "cl": 57.84722222222222
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "81e23ef4705b29b3876f31e4dd9e1698e4d00cb78515ca62ad301105ebedf709",
+        "bytes": 170,
+        "elapsedMs": 3.4681000000018685
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.cl",
+            "expected": 57.85,
+            "obtained": 57.84722222222222,
+            "tolerance": 0.01,
+            "difference": 0.0027777777777799884,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.cl",
+            "expected": 57.84722222222222,
+            "obtained": 57.84722222222222,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "57,8",
+            "obtained": "57,8",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "mL/min",
+            "obtained": "mL/min",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": []
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "clearance-de-creatinina",
+      "kind": "native-source-reference",
+      "index": 2,
+      "name": "80 anos, 50 kg, Cr 2,0 (mulher): 17,7 mL/min",
+      "originalInput": {
+        "idade": 80,
+        "peso": 50,
+        "cr": 2,
+        "sexo": "F"
+      },
+      "input": {
+        "idade": 80,
+        "peso": 50,
+        "cr": 2,
+        "sexo": "F"
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "cl": 17.71
+        },
+        "tol": 0.01,
+        "level": "high"
+      },
+      "recordedResult": {
+        "main": [
+          "17,7",
+          "mL/min"
+        ],
+        "label": "Clearance de creatinina",
+        "raw": {
+          "cl": 17.708333333333332
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/clearance-de-creatinina/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "idade": 80,
+            "peso": 50,
+            "cr": 2,
+            "sexo": "F"
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/clearance-de-creatinina/calculate",
+          "startedAt": "2026-10-05T17:36:14.414Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "clearance-de-creatinina",
+              "main": [
+                "17,7",
+                "mL/min"
+              ],
+              "label": "Clearance de creatinina",
+              "raw": {
+                "cl": 17.708333333333332
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "04cca3998b5c9c978b8cc79e827696812e55cdcd0d76f64dc000222d70f34719",
+          "bytes": 171,
+          "elapsedMs": 7.51050000000032
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/clearance-de-creatinina/calculate",
+        "startedAt": "2026-10-05T17:36:14.414Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "clearance-de-creatinina",
+            "main": [
+              "17,7",
+              "mL/min"
+            ],
+            "label": "Clearance de creatinina",
+            "raw": {
+              "cl": 17.708333333333332
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "04cca3998b5c9c978b8cc79e827696812e55cdcd0d76f64dc000222d70f34719",
+        "bytes": 171,
+        "elapsedMs": 7.51050000000032
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.cl",
+            "expected": 17.71,
+            "obtained": 17.708333333333332,
+            "tolerance": 0.01,
+            "difference": 0.0016666666666687036,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.cl",
+            "expected": 17.708333333333332,
+            "obtained": 17.708333333333332,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "17,7",
+            "obtained": "17,7",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "mL/min",
+            "obtained": "mL/min",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    }
+  ],
+  "scope": {
+    "syntheticDataOnly": true,
+    "applicationModuleImports": 0,
+    "browserInteractions": 0,
+    "newIndependentOracles": 0,
+    "nativeSourceReferenceCases": 882,
+    "additionalDecimalCases": 4,
+    "predictProstateHasSeparateFullCurveOracleReplay": true,
+    "clinicalApproval": false,
+    "professionalLanguageApproval": false,
+    "populationValidation": false,
+    "hostingerDeploymentVerified": false,
+    "actualHTTPExecution": true,
+    "standaloneNodeServer": true,
+    "nodeVersion": "v22.18.0",
+    "noNewClinicalOrProfessionalApproval": true,
+    "pubmedResourceIsNotCalculatorAndNotIncludedIn222": true,
+    "description": "All 882 existing reference cases across the 218 native calculators plus four existing Decimal50 examples, executed via HTTP against the final local r6 standalone build. Raw precise source-audit comparisons are transport regressions, not independent clinical or full-method validation."
+  },
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false,
+  "newIndependentOracle": false,
+  "actualBrowserJourney": false,
+  "hostingerDeploymentVerified": false
+}
