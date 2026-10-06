@@ -1,0 +1,171 @@
+{
+  "schema": "elucenia-public-source-result-preservation-v1",
+  "id": "clearance-de-creatinina",
+  "source": {
+    "baselineFile": "reports/review-20261005-completion/public-native-output-baseline-r2/baseline.json",
+    "baselineSha256": "e5f274fa5acc74566e1c3d55afb6bb402ad9928337dd77a2945442f5b6c49439",
+    "previousCommit": "55bb90b24885ee3a9b520c94ad0dea92045b3dd8",
+    "oldEngineSha256": "400c0bd83d47a15c431526b963a6a0b1983f93b291418084a0b4c785027c66e2",
+    "currentEngineSha256": "964e7156d8ead26d531f2e88e961299f3ae91e3351bd6b2cda0822f6c6245178"
+  },
+  "scope": "Existing synthetic inputs and same pinned mathematical-function outputs. Clinical interpretation correctness and professional translation are separate unperformed reviews.",
+  "clinicalApproval": "not-performed",
+  "professionalLanguageReview": "not-performed",
+  "cases": [
+    {
+      "caseIndex": 0,
+      "name": "70 anos, 70 kg, Cr 1,0 (homem): 68,1 mL/min",
+      "input": {
+        "idade": 70,
+        "peso": 70,
+        "cr": 1,
+        "sexo": "M"
+      },
+      "publicOutput": {
+        "id": "clearance-de-creatinina",
+        "main": [
+          "68,1",
+          "mL/min"
+        ],
+        "label": "Clearance de creatinina",
+        "raw": {
+          "cl": 68.05555555555556
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "cl": 68.06
+        },
+        "tol": 0.01,
+        "level": "low"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "68,1",
+          "mL/min"
+        ],
+        "label": "Clearance de creatinina",
+        "level": "low",
+        "verdict": "Dose plena da maioria dos DOACs",
+        "raw": {
+          "cl": 68.05555555555556
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level"
+      ]
+    },
+    {
+      "caseIndex": 1,
+      "name": "70 anos, 70 kg, Cr 1,0 (mulher): 57,9 mL/min (× 0,85)",
+      "input": {
+        "idade": 70,
+        "peso": 70,
+        "cr": 1,
+        "sexo": "F"
+      },
+      "publicOutput": {
+        "id": "clearance-de-creatinina",
+        "main": [
+          "57,8",
+          "mL/min"
+        ],
+        "label": "Clearance de creatinina",
+        "raw": {
+          "cl": 57.84722222222222
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "cl": 57.85
+        },
+        "tol": 0.01
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "57,8",
+          "mL/min"
+        ],
+        "label": "Clearance de creatinina",
+        "level": "low",
+        "verdict": "Dose plena da maioria dos DOACs",
+        "raw": {
+          "cl": 57.84722222222222
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level"
+      ]
+    },
+    {
+      "caseIndex": 2,
+      "name": "80 anos, 50 kg, Cr 2,0 (mulher): 17,7 mL/min",
+      "input": {
+        "idade": 80,
+        "peso": 50,
+        "cr": 2,
+        "sexo": "F"
+      },
+      "publicOutput": {
+        "id": "clearance-de-creatinina",
+        "main": [
+          "17,7",
+          "mL/min"
+        ],
+        "label": "Clearance de creatinina",
+        "raw": {
+          "cl": 17.708333333333332
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "cl": 17.71
+        },
+        "tol": 0.01,
+        "level": "high"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "17,7",
+          "mL/min"
+        ],
+        "label": "Clearance de creatinina",
+        "level": "high",
+        "verdict": "Uso restrito de DOACs; dabigatrana contraindicada",
+        "raw": {
+          "cl": 17.708333333333332
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level"
+      ]
+    }
+  ]
+}

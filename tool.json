@@ -139,7 +139,7 @@
       "publicCandidateBankOmitted": true
     },
     "methodVersion": "Cockcroft Gault 1976:(140−idade)×peso/(72×Cr); fator mulher 0,85; Cl Crnãoindexado",
-    "implementationVersion": "clearance-de-creatinina@native-2026-10-03+400c0bd83d47",
+    "implementationVersion": "clearance-de-creatinina@native-2026-10-05+964e7156d8ea",
     "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/1244564/",
     "versionEvidence": {
       "status": "variant-and-source-edition-recorded",
@@ -250,7 +250,35 @@
       "clinicalApproval": "not-performed",
       "translationApproval": "not-performed",
       "releaseApproval": "not-performed",
-      "implementationHash": "400c0bd83d47a15c431526b963a6a0b1983f93b291418084a0b4c785027c66e2"
+      "implementationHash": "964e7156d8ead26d531f2e88e961299f3ae91e3351bd6b2cda0822f6c6245178",
+      "documentedOutputContract": {
+        "fields": [
+          "level",
+          "verdict",
+          "rows",
+          "note"
+        ],
+        "scope": "Optional documented outputs already produced by the existing scientific method; no new classification or treatment decision.",
+        "sourceExposureReceipt": {
+          "file": "reports/review-20261005-completion/native-result-presentation-r1/applied-output-r1/receipt.json",
+          "sha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        },
+        "scientificBodiesUnchanged": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      },
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-05T23:55:42.176Z",
+          "scope": "Expose existing documented result fields; scientific body and complete input contract unchanged.",
+          "previousImplementationVersion": "clearance-de-creatinina@native-2026-10-03+400c0bd83d47",
+          "previousImplementationHash": "400c0bd83d47a15c431526b963a6a0b1983f93b291418084a0b4c785027c66e2",
+          "implementationHash": "964e7156d8ead26d531f2e88e961299f3ae91e3351bd6b2cda0822f6c6245178",
+          "scientificBodySha256": "f2c63698de7208dcec5dda0cc98ff7a6e11b1a47f307a9228fc0610b91b9565d",
+          "metadataContractHash": "cd88a6aa7e01e03e4acfe5b13a3f08490d70e737a92bc7e6b452249b5d992a9b",
+          "exposureReceiptSha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        }
+      ]
     },
     "limits": "Estimativa histórica de clearance de creatinina em mL/min, sem indexação por superfície corporal; não equivale à TFG medida nem ao valor CKD-EPI indexado. O cálculo usa exatamente o peso informado e não escolhe automaticamente peso real, ideal ou ajustado. Tamanho corporal ou massa muscular atípicos e condições que alteram a creatinina podem prejudicar a estimativa. Para dose de medicamento, confira a bula e o protocolo específicos, o método renal usado e a necessidade de confirmação, sobretudo com margem terapêutica estreita. O resultado isolado não prescreve dose.",
     "limitsEvidence": {
@@ -284,20 +312,20 @@
   },
   "currentSource": {
     "file": "apps/website/private/tool-code/clearance-de-creatinina/calculator.js",
-    "bytes": 5028,
-    "sha256": "400c0bd83d47a15c431526b963a6a0b1983f93b291418084a0b4c785027c66e2"
+    "bytes": 5233,
+    "sha256": "964e7156d8ead26d531f2e88e961299f3ae91e3351bd6b2cda0822f6c6245178"
   },
-  "sourceToolSha256": "e72276bd37a3544c7869641d65b6a443eb37908f306d13e75d4935f8740cf31d",
+  "sourceToolSha256": "13a4e2c0adf19134a965c36295b7cfbbe4021692da23e73e752e7cdd4aa5ca96",
   "omittedFullReferenceBanks": [
     {
       "rows": 3,
       "sha256": "5a4473af96ee31901e4f45a17faee9ef10201263186eec5c25de0060480ff5d7",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     },
     {
       "rows": 3,
       "sha256": "5a4473af96ee31901e4f45a17faee9ef10201263186eec5c25de0060480ff5d7",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     }
   ],
   "clinicalApproval": "not-performed",

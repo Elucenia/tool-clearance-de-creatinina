@@ -1,0 +1,387 @@
+{
+  "id": "clearance-de-creatinina",
+  "implementationVersion": "clearance-de-creatinina@native-2026-10-05+964e7156d8ea",
+  "scope": "Rendered current output against the same source method; not an independent numerical/clinical oracle",
+  "locales": {
+    "pt-BR": [
+      {
+        "name": "70 anos, 70 kg, Cr 1,0 (homem): 68,1 mL/min",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Dose plena da maioria dos DOACs",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "70 anos, 70 kg, Cr 1,0 (mulher): 57,9 mL/min (× 0,85)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Dose plena da maioria dos DOACs",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "80 anos, 50 kg, Cr 2,0 (mulher): 17,7 mL/min",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Uso restrito de DOACs; dabigatrana contraindicada",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "en": [
+      {
+        "name": "70 anos, 70 kg, Cr 1,0 (homem): 68,1 mL/min",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Full dose of most DOACs",
+            "locale": "en",
+            "template": "documented-authored-a98c73ace29b59c12f65"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "70 anos, 70 kg, Cr 1,0 (mulher): 57,9 mL/min (× 0,85)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Full dose of most DOACs",
+            "locale": "en",
+            "template": "documented-authored-a98c73ace29b59c12f65"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "80 anos, 50 kg, Cr 2,0 (mulher): 17,7 mL/min",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Restricted use of DOACs; dabigatran contraindicated",
+            "locale": "en",
+            "template": "documented-authored-2e7aa3047ea3f5d85ee4"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "es": [
+      {
+        "name": "70 anos, 70 kg, Cr 1,0 (homem): 68,1 mL/min",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Dosis plena de la mayoría de los DOACs",
+            "locale": "es",
+            "template": "documented-authored-a98c73ace29b59c12f65"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "70 anos, 70 kg, Cr 1,0 (mulher): 57,9 mL/min (× 0,85)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Dosis plena de la mayoría de los DOACs",
+            "locale": "es",
+            "template": "documented-authored-a98c73ace29b59c12f65"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "80 anos, 50 kg, Cr 2,0 (mulher): 17,7 mL/min",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Uso restringido de DOACs; dabigatrán contraindicado",
+            "locale": "es",
+            "template": "documented-authored-2e7aa3047ea3f5d85ee4"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "fr": [
+      {
+        "name": "70 anos, 70 kg, Cr 1,0 (homem): 68,1 mL/min",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Dose pleine de la plupart des AOD",
+            "locale": "fr",
+            "template": "documented-authored-a98c73ace29b59c12f65"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "70 anos, 70 kg, Cr 1,0 (mulher): 57,9 mL/min (× 0,85)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Dose pleine de la plupart des AOD",
+            "locale": "fr",
+            "template": "documented-authored-a98c73ace29b59c12f65"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "80 anos, 50 kg, Cr 2,0 (mulher): 17,7 mL/min",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Utilisation restreinte des AOD ; dabigatran contre-indiqué",
+            "locale": "fr",
+            "template": "documented-authored-2e7aa3047ea3f5d85ee4"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "de": [
+      {
+        "name": "70 anos, 70 kg, Cr 1,0 (homem): 68,1 mL/min",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Volle Dosis der meisten DOAKs",
+            "locale": "de",
+            "template": "documented-authored-a98c73ace29b59c12f65"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "70 anos, 70 kg, Cr 1,0 (mulher): 57,9 mL/min (× 0,85)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Volle Dosis der meisten DOAKs",
+            "locale": "de",
+            "template": "documented-authored-a98c73ace29b59c12f65"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "80 anos, 50 kg, Cr 2,0 (mulher): 17,7 mL/min",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Eingeschränkte Anwendung von DOAKs; Dabigatran kontraindiziert",
+            "locale": "de",
+            "template": "documented-authored-2e7aa3047ea3f5d85ee4"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "it": [
+      {
+        "name": "70 anos, 70 kg, Cr 1,0 (homem): 68,1 mL/min",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Dose piena della maggior parte dei DOAC",
+            "locale": "it",
+            "template": "documented-authored-a98c73ace29b59c12f65"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "70 anos, 70 kg, Cr 1,0 (mulher): 57,9 mL/min (× 0,85)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Dose piena della maggior parte dei DOAC",
+            "locale": "it",
+            "template": "documented-authored-a98c73ace29b59c12f65"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "80 anos, 50 kg, Cr 2,0 (mulher): 17,7 mL/min",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Uso limitato dei DOAC; dabigatran controindicato",
+            "locale": "it",
+            "template": "documented-authored-2e7aa3047ea3f5d85ee4"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "name": "70 anos, 70 kg, Cr 1,0 (homem): 68,1 mL/min",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "الجرعة الكاملة لمعظم DOACs",
+            "locale": "ar",
+            "template": "documented-authored-a98c73ace29b59c12f65"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "70 anos, 70 kg, Cr 1,0 (mulher): 57,9 mL/min (× 0,85)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "الجرعة الكاملة لمعظم DOACs",
+            "locale": "ar",
+            "template": "documented-authored-a98c73ace29b59c12f65"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "80 anos, 50 kg, Cr 2,0 (mulher): 17,7 mL/min",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "استخدام مقيد لـ DOACs؛ dabigatran مُضاد للاستطباب",
+            "locale": "ar",
+            "template": "documented-authored-2e7aa3047ea3f5d85ee4"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "zh": [
+      {
+        "name": "70 anos, 70 kg, Cr 1,0 (homem): 68,1 mL/min",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "大多数DOACs的全剂量",
+            "locale": "zh",
+            "template": "documented-authored-a98c73ace29b59c12f65"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "70 anos, 70 kg, Cr 1,0 (mulher): 57,9 mL/min (× 0,85)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "大多数DOACs的全剂量",
+            "locale": "zh",
+            "template": "documented-authored-a98c73ace29b59c12f65"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "80 anos, 50 kg, Cr 2,0 (mulher): 17,7 mL/min",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "DOACs使用受限；达比加群禁用",
+            "locale": "zh",
+            "template": "documented-authored-2e7aa3047ea3f5d85ee4"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ja": [
+      {
+        "name": "70 anos, 70 kg, Cr 1,0 (homem): 68,1 mL/min",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "ほとんどのDOACsの全量",
+            "locale": "ja",
+            "template": "documented-authored-a98c73ace29b59c12f65"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "70 anos, 70 kg, Cr 1,0 (mulher): 57,9 mL/min (× 0,85)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "ほとんどのDOACsの全量",
+            "locale": "ja",
+            "template": "documented-authored-a98c73ace29b59c12f65"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "80 anos, 50 kg, Cr 2,0 (mulher): 17,7 mL/min",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "DOACsの使用は制限される；ダビガトランは禁忌",
+            "locale": "ja",
+            "template": "documented-authored-2e7aa3047ea3f5d85ee4"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "hi": [
+      {
+        "name": "70 anos, 70 kg, Cr 1,0 (homem): 68,1 mL/min",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "अधिकांश DOACs की पूर्ण खुराक",
+            "locale": "hi",
+            "template": "documented-authored-a98c73ace29b59c12f65"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "70 anos, 70 kg, Cr 1,0 (mulher): 57,9 mL/min (× 0,85)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "अधिकांश DOACs की पूर्ण खुराक",
+            "locale": "hi",
+            "template": "documented-authored-a98c73ace29b59c12f65"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "80 anos, 50 kg, Cr 2,0 (mulher): 17,7 mL/min",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "DOACs का सीमित उपयोग; डाबीगैट्रान contraindicated",
+            "locale": "hi",
+            "template": "documented-authored-2e7aa3047ea3f5d85ee4"
+          },
+          "level": "high"
+        }
+      }
+    ]
+  }
+}
